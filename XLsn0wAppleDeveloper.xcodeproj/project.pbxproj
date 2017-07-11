@@ -8,24 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		35F3DAB31F1229D70040134C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAB21F1229D70040134C /* main.m */; };
-		35F3DAB61F1229D70040134C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAB51F1229D70040134C /* AppDelegate.m */; };
-		35F3DAB91F1229D70040134C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAB81F1229D70040134C /* ViewController.m */; };
 		35F3DABC1F1229D70040134C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F3DABA1F1229D70040134C /* Main.storyboard */; };
 		35F3DABE1F1229D70040134C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F3DABD1F1229D70040134C /* Assets.xcassets */; };
 		35F3DAC11F1229D70040134C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F3DABF1F1229D70040134C /* LaunchScreen.storyboard */; };
+		35F3DAE01F122A510040134C /* DWAnimationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DACB1F122A510040134C /* DWAnimationGroup.m */; };
+		35F3DAE11F122A510040134C /* DWAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DACD1F122A510040134C /* DWAnimationManager.m */; };
+		35F3DAE21F122A510040134C /* DWAnimationMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAD01F122A510040134C /* DWAnimationMaker.m */; };
+		35F3DAE31F122A510040134C /* BaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAD31F122A510040134C /* BaseAnimation.m */; };
+		35F3DAE41F122A510040134C /* DWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAD51F122A510040134C /* DWAnimation.m */; };
+		35F3DAE51F122A510040134C /* CALayer+DWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAD81F122A510040134C /* CALayer+DWAnimation.m */; };
+		35F3DAE61F122A510040134C /* UIView+DWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DADA1F122A510040134C /* UIView+DWAnimation.m */; };
+		35F3DAE71F122A510040134C /* LS_jumpStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DADC1F122A510040134C /* LS_jumpStarView.m */; };
+		35F3DAF11F122A600040134C /* BQDragCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAEA1F122A600040134C /* BQDragCardItem.m */; };
+		35F3DAF21F122A600040134C /* BQDragCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAEC1F122A600040134C /* BQDragCardView.m */; };
+		35F3DAF31F122A600040134C /* RRFPSBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAF01F122A600040134C /* RRFPSBar.m */; };
+		35F3DAF81F122A760040134C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAF51F122A760040134C /* AppDelegate.m */; };
+		35F3DAF91F122A760040134C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F3DAF71F122A760040134C /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35F3DAAE1F1229D70040134C /* XLsn0wAppleDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLsn0wAppleDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F3DAB21F1229D70040134C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		35F3DAB41F1229D70040134C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		35F3DAB51F1229D70040134C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		35F3DAB71F1229D70040134C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		35F3DAB81F1229D70040134C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		35F3DABB1F1229D70040134C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35F3DABD1F1229D70040134C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35F3DAC01F1229D70040134C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35F3DAC21F1229D70040134C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35F3DACA1F122A510040134C /* DWAnimationGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWAnimationGroup.h; sourceTree = "<group>"; };
+		35F3DACB1F122A510040134C /* DWAnimationGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWAnimationGroup.m; sourceTree = "<group>"; };
+		35F3DACC1F122A510040134C /* DWAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWAnimationManager.h; sourceTree = "<group>"; };
+		35F3DACD1F122A510040134C /* DWAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWAnimationManager.m; sourceTree = "<group>"; };
+		35F3DACF1F122A510040134C /* DWAnimationMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWAnimationMaker.h; sourceTree = "<group>"; };
+		35F3DAD01F122A510040134C /* DWAnimationMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWAnimationMaker.m; sourceTree = "<group>"; };
+		35F3DAD21F122A510040134C /* BaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimation.h; sourceTree = "<group>"; };
+		35F3DAD31F122A510040134C /* BaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimation.m; sourceTree = "<group>"; };
+		35F3DAD41F122A510040134C /* DWAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWAnimation.h; sourceTree = "<group>"; };
+		35F3DAD51F122A510040134C /* DWAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWAnimation.m; sourceTree = "<group>"; };
+		35F3DAD71F122A510040134C /* CALayer+DWAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+DWAnimation.h"; sourceTree = "<group>"; };
+		35F3DAD81F122A510040134C /* CALayer+DWAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+DWAnimation.m"; sourceTree = "<group>"; };
+		35F3DAD91F122A510040134C /* UIView+DWAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DWAnimation.h"; sourceTree = "<group>"; };
+		35F3DADA1F122A510040134C /* UIView+DWAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DWAnimation.m"; sourceTree = "<group>"; };
+		35F3DADB1F122A510040134C /* LS_jumpStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LS_jumpStarView.h; sourceTree = "<group>"; };
+		35F3DADC1F122A510040134C /* LS_jumpStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LS_jumpStarView.m; sourceTree = "<group>"; };
+		35F3DADE1F122A510040134C /* XLsn0wAnimationConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLsn0wAnimationConfig.h; sourceTree = "<group>"; };
+		35F3DADF1F122A510040134C /* XLsn0wAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLsn0wAnimationKit.h; sourceTree = "<group>"; };
+		35F3DAE91F122A600040134C /* BQDragCardItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDragCardItem.h; sourceTree = "<group>"; };
+		35F3DAEA1F122A600040134C /* BQDragCardItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQDragCardItem.m; sourceTree = "<group>"; };
+		35F3DAEB1F122A600040134C /* BQDragCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDragCardView.h; sourceTree = "<group>"; };
+		35F3DAEC1F122A600040134C /* BQDragCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQDragCardView.m; sourceTree = "<group>"; };
+		35F3DAED1F122A600040134C /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		35F3DAEF1F122A600040134C /* RRFPSBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFPSBar.h; sourceTree = "<group>"; };
+		35F3DAF01F122A600040134C /* RRFPSBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFPSBar.m; sourceTree = "<group>"; };
+		35F3DAF41F122A760040134C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		35F3DAF51F122A760040134C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		35F3DAF61F122A760040134C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		35F3DAF71F122A760040134C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +78,7 @@
 		35F3DAA51F1229D70040134C = {
 			isa = PBXGroup;
 			children = (
+				35F3DAC81F122A510040134C /* XLsn0wAnimationKit */,
 				35F3DAB01F1229D70040134C /* XLsn0wAppleDeveloper */,
 				35F3DAAF1F1229D70040134C /* Products */,
 			);
@@ -58,10 +95,10 @@
 		35F3DAB01F1229D70040134C /* XLsn0wAppleDeveloper */ = {
 			isa = PBXGroup;
 			children = (
-				35F3DAB41F1229D70040134C /* AppDelegate.h */,
-				35F3DAB51F1229D70040134C /* AppDelegate.m */,
-				35F3DAB71F1229D70040134C /* ViewController.h */,
-				35F3DAB81F1229D70040134C /* ViewController.m */,
+				35F3DAF41F122A760040134C /* AppDelegate.h */,
+				35F3DAF51F122A760040134C /* AppDelegate.m */,
+				35F3DAF61F122A760040134C /* ViewController.h */,
+				35F3DAF71F122A760040134C /* ViewController.m */,
 				35F3DABA1F1229D70040134C /* Main.storyboard */,
 				35F3DABD1F1229D70040134C /* Assets.xcassets */,
 				35F3DABF1F1229D70040134C /* LaunchScreen.storyboard */,
@@ -77,6 +114,94 @@
 				35F3DAB21F1229D70040134C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35F3DAC81F122A510040134C /* XLsn0wAnimationKit */ = {
+			isa = PBXGroup;
+			children = (
+				35F3DADD1F122A510040134C /* XLsn0wAnimationConfig */,
+				35F3DAD61F122A510040134C /* Extension */,
+				35F3DAE81F122A600040134C /* BQCardView */,
+				35F3DAEE1F122A600040134C /* RRFPSBar */,
+				35F3DAC91F122A510040134C /* AnimationGroup */,
+				35F3DACE1F122A510040134C /* AnimationMaker */,
+				35F3DAD11F122A510040134C /* BaseClass */,
+				35F3DAD41F122A510040134C /* DWAnimation.h */,
+				35F3DAD51F122A510040134C /* DWAnimation.m */,
+				35F3DADB1F122A510040134C /* LS_jumpStarView.h */,
+				35F3DADC1F122A510040134C /* LS_jumpStarView.m */,
+				35F3DADF1F122A510040134C /* XLsn0wAnimationKit.h */,
+			);
+			path = XLsn0wAnimationKit;
+			sourceTree = "<group>";
+		};
+		35F3DAC91F122A510040134C /* AnimationGroup */ = {
+			isa = PBXGroup;
+			children = (
+				35F3DACA1F122A510040134C /* DWAnimationGroup.h */,
+				35F3DACB1F122A510040134C /* DWAnimationGroup.m */,
+				35F3DACC1F122A510040134C /* DWAnimationManager.h */,
+				35F3DACD1F122A510040134C /* DWAnimationManager.m */,
+			);
+			path = AnimationGroup;
+			sourceTree = "<group>";
+		};
+		35F3DACE1F122A510040134C /* AnimationMaker */ = {
+			isa = PBXGroup;
+			children = (
+				35F3DACF1F122A510040134C /* DWAnimationMaker.h */,
+				35F3DAD01F122A510040134C /* DWAnimationMaker.m */,
+			);
+			path = AnimationMaker;
+			sourceTree = "<group>";
+		};
+		35F3DAD11F122A510040134C /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				35F3DAD21F122A510040134C /* BaseAnimation.h */,
+				35F3DAD31F122A510040134C /* BaseAnimation.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		35F3DAD61F122A510040134C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				35F3DAD71F122A510040134C /* CALayer+DWAnimation.h */,
+				35F3DAD81F122A510040134C /* CALayer+DWAnimation.m */,
+				35F3DAD91F122A510040134C /* UIView+DWAnimation.h */,
+				35F3DADA1F122A510040134C /* UIView+DWAnimation.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		35F3DADD1F122A510040134C /* XLsn0wAnimationConfig */ = {
+			isa = PBXGroup;
+			children = (
+				35F3DADE1F122A510040134C /* XLsn0wAnimationConfig.h */,
+			);
+			path = XLsn0wAnimationConfig;
+			sourceTree = "<group>";
+		};
+		35F3DAE81F122A600040134C /* BQCardView */ = {
+			isa = PBXGroup;
+			children = (
+				35F3DAE91F122A600040134C /* BQDragCardItem.h */,
+				35F3DAEA1F122A600040134C /* BQDragCardItem.m */,
+				35F3DAEB1F122A600040134C /* BQDragCardView.h */,
+				35F3DAEC1F122A600040134C /* BQDragCardView.m */,
+				35F3DAED1F122A600040134C /* Define.h */,
+			);
+			path = BQCardView;
+			sourceTree = "<group>";
+		};
+		35F3DAEE1F122A600040134C /* RRFPSBar */ = {
+			isa = PBXGroup;
+			children = (
+				35F3DAEF1F122A600040134C /* RRFPSBar.h */,
+				35F3DAF01F122A600040134C /* RRFPSBar.m */,
+			);
+			path = RRFPSBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +275,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F3DAB91F1229D70040134C /* ViewController.m in Sources */,
-				35F3DAB61F1229D70040134C /* AppDelegate.m in Sources */,
+				35F3DAF91F122A760040134C /* ViewController.m in Sources */,
+				35F3DAE21F122A510040134C /* DWAnimationMaker.m in Sources */,
+				35F3DAF11F122A600040134C /* BQDragCardItem.m in Sources */,
+				35F3DAF21F122A600040134C /* BQDragCardView.m in Sources */,
+				35F3DAE11F122A510040134C /* DWAnimationManager.m in Sources */,
+				35F3DAE61F122A510040134C /* UIView+DWAnimation.m in Sources */,
+				35F3DAE41F122A510040134C /* DWAnimation.m in Sources */,
+				35F3DAF31F122A600040134C /* RRFPSBar.m in Sources */,
+				35F3DAF81F122A760040134C /* AppDelegate.m in Sources */,
+				35F3DAE71F122A510040134C /* LS_jumpStarView.m in Sources */,
+				35F3DAE01F122A510040134C /* DWAnimationGroup.m in Sources */,
 				35F3DAB31F1229D70040134C /* main.m in Sources */,
+				35F3DAE51F122A510040134C /* CALayer+DWAnimation.m in Sources */,
+				35F3DAE31F122A510040134C /* BaseAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +445,7 @@
 				35F3DAC71F1229D70040134C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

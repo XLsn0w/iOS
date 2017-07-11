@@ -1,12 +1,16 @@
 //
 //  AppDelegate.m
-//  XLsn0wAppleDeveloper
+//  XLsn0wCAAnimation
 //
-//  Created by XLsn0w on 2017/7/9.
+//  Created by XLsn0w on 2017/6/27.
 //  Copyright © 2017年 XLsn0w. All rights reserved.
 //
 
 #import "AppDelegate.h"
+// Include only if app is is not optimized (aka debug build)
+#ifndef __OPTIMIZE__
+#import "RRFPSBar.h"
+#endif
 
 @interface AppDelegate ()
 
@@ -17,6 +21,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Show only if app is is not optimized (aka debug build)
+#ifndef __OPTIMIZE__
+    [[RRFPSBar sharedInstance] setHidden:NO];
+#endif
     return YES;
 }
 
