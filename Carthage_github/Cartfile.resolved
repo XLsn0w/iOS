@@ -1,0 +1,3 @@
+github "AFNetworking/AFNetworking" "3.2.1"
+github "Alamofire/Alamofire" "4.9.1"
+github "Alamofire/AlamofireImage" "3.6.0"
