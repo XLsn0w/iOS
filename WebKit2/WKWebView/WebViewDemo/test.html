@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>分享页</title>
+    </head>
+    <body>
+<!--      可以放开注释，测试img包含在a标签中时，是否还会添加onclick事件          -->
+<!--        <a>-->
+            <img src="http://cc.cocimg.com/api/uploads/170425/b2d6e7ea5b3172e6c39120b7bfd662fb.jpg">
+<!--        </a>-->
+        <div>
+            <a href="darkangel://smsLogin?username=12323123&code=892845">短信验证登录</a>
+        </div>
+        </div>
+            <a href="javascript:void(0);" class="sharebtn" onclick="share('分享标题', 'http://cc.cocimg.com/api/uploads/170425/b2d6e7ea5b3172e6c39120b7bfd662fb.jpg', location.href)">分享活动，领30元红包</a>
+        </div>
+        <div onclick="alert(testAddMethod(1,5))">点击测试两数相加</div>
+        <a href="javascript:void(0);" onclick="test()">测试新分享</a></br>
+        <h>下面展示分享结果</p><div id="shareResult"></div>
+        <div>
+            <a href="javascript:void(0);" onclick="chooseContact()">选择联系人</a>
+            <div id="contactInfo"></div>
+        </div>
+        <script>
+            //简单分享
+            function share (title, imgUrl, link) {
+                //便于WKWebView测试
+                window.webkit.messageHandlers.share.postMessage({title: title, imgUrl: imgUrl, link: link});
+                //这里需要OC实现
+            }
+        
+            //该方法传入两个整数，求和，并返回结果
+            function testAddMethod (a, b) {
+                //需要OC实现a+b，并返回
+                return a + b;
+            }
+        
+            /**
+             * 分享方法，并且会异步回调分享结果
+             * @param  {对象类型} shareData 一个分享数据的对象，包含title,imgUrl,link以及一个回调function
+             * @return {void}	 无同步返回值
+             */
+            function shareNew(shareData) {
+                
+                var title = shareData.title;
+                var imgUrl = shareData.imgUrl;
+                var link = shareData.link;
+                var result = shareData.result;
+                //do something
+                //这里模拟异步操作
+                setTimeout(function(){
+                   //2s之后，回调true分享成功
+                   result(true);
+                }, 2000);
+                
+                
+                //用于WKWebView，因为WKWebView并没有办法把js function传递过去，因此需要特殊处理一下
+                //把js function转换为字符串，oc端调用时 (<js function string>)(true); 即可
+                shareData.result = result.toString();
+                window.webkit.messageHandlers.shareNew.postMessage(shareData);
+            }
+        
+            function test() {
+                //清空分享结果
+                shareResult.innerHTML = "";
+                
+                //调用时，应该
+                shareNew({
+                         title: "title",
+                         imgUrl: "http://img.dd.com/xxx.png",
+                         link: location.href,
+                         result: function(res) {
+                           //这里shareResult 等同于 document.getElementById("shareResult")
+                           shareResult.innerHTML = res ? "success" : "failure";
+                         }
+                });
+            }
+        
+        function chooseContact() {
+            DANativeApi.choosePhoneContact({
+                                           completion: function(res) {
+                                           contactInfo.innerHTML = JSON.stringify(res);
+                                           }
+                                           });
+        }
+        
+        </script>
+    </body>
+</html>
