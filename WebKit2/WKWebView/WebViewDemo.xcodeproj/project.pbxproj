@@ -122,6 +122,8 @@
 			children = (
 				F26895771D780DF9009112EB /* AppDelegate.h */,
 				F26895781D780DF9009112EB /* AppDelegate.m */,
+				F26895AA1D780F01009112EB /* WKWebViewController.h */,
+				F26895AB1D780F01009112EB /* WKWebViewController.m */,
 				04CE11A023A9FEFC00EE4AF2 /* WKWebViewMakeController.h */,
 				04CE11A123A9FEFC00EE4AF2 /* WKWebViewMakeController.m */,
 				F26895AF1D782B9D009112EB /* test.html */,
@@ -134,8 +136,6 @@
 				F2BE3E241EC31FB1001D7FF5 /* NSHTTPCookieStorage+Utils.m */,
 				F26895A71D780EF6009112EB /* UIWebViewController.h */,
 				F26895A81D780EF7009112EB /* UIWebViewController.m */,
-				F26895AA1D780F01009112EB /* WKWebViewController.h */,
-				F26895AB1D780F01009112EB /* WKWebViewController.m */,
 				F268957D1D780DFA009112EB /* Main.storyboard */,
 				F26895801D780DFA009112EB /* Assets.xcassets */,
 				F26895821D780DFA009112EB /* LaunchScreen.storyboard */,

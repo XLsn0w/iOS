@@ -12,12 +12,7 @@
 #import <WebKit/WebKit.h>
 #import <ContactsUI/ContactsUI.h>
 
-@interface WKWebViewController () <
-WKUIDelegate,
-WKNavigationDelegate,
-WKScriptMessageHandler,
-CNContactPickerDelegate
->
+@interface WKWebViewController () <WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler, CNContactPickerDelegate>
 
 @property (strong, nonatomic) WKWebView *webView;
 
