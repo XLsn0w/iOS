@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>触动精灵安装向导</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+<body>
+<div class="banner">
+    <img src="./banner1024.png">
+</div>
+<div class="con">
+    <div class="fes">
+        <div class="des">
+            <p>模拟操作</p>
+            <p>一键录制，智能辅助，省时省力</p>
+        </div>
+    </div>
+    <div class="fes">
+        <div class="des">
+            <p>开发手册</p>
+            <p>大量范例，简单易上手</p>
+        </div>
+    </div>
+    <div class="fes">
+        <div class="des">
+            <p>开发者平台</p>
+            <p>TSP 加密，扫码下载，脚本分发管理更加便捷</p>
+        </div>
+    </div>
+    <a href="javascript:void(0);" onclick="eventually(installDeb);" class="btn-install">立即安装</a>
+</div>
+<script type="text/javascript">
+    var userAgent = navigator.userAgent.toLowerCase();
+    var identifier1 = "com.touchsprite.ios";
+    var identifier2 = "com.ts.sourceicon";
+    var myUrl = "touchsprite://";
+    if (userAgent.indexOf('ipad') != -1) {
+        // iPad 版
+    }
+    // Deb 下载源
+    var mySource = "http://apt.touchsprite.com/";
+    // 名称
+    var ppName = "触动精灵";
+    var openFlag = false;
+    // 添加源
+    function addSource() {
+        try {
+            if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                cydia.addTrivialSource(mySource);
+                cydia.refreshSources();
+                window.setTimeout(function(){cydia.unload();}, 0);
+            }
+        } catch (e) {
+            
+        }
+    }
+    // 安装 Deb 包
+    function installDeb() {
+        try {
+            openFlag = true;
+            if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                // 源
+                var isAdded = false;
+                var sources = cydia.getAllSources();
+                for (var source in sources) {
+                    source = sources[source];
+                    var rooturi = source.rooturi;
+                    if (rooturi == mySource) {
+                        isAdded = true;
+                        break;
+                    }
+                }
+                if (!isAdded) {
+                    addSource();
+                }
+            }
+        } catch (e) {
+            
+        }
+        try {
+            if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                var package1 = cydia.getPackageById(identifier1);
+                var package2 = cydia.getPackageById(identifier2);
+                if (package1 != null) {
+                    document.title = "触动精灵安装向导";
+                    cydia.installPackages([package1, package2]);
+                }else{
+                    cydia.refreshSources();
+                }
+            }
+        } catch (e) {
+            
+        }
+    }
+    // 延迟执行函数
+    function eventually(f) {
+        setTimeout(f, 500);
+    }
+    try {
+        document.addEventListener("CydiaReloadData", function() {
+            // 检测已安装
+            var packages = cydia.getInstalledPackages();
+            for (var pk in packages) {
+                pk = packages[pk];
+                if (pk.getField("name").indexOf(ppName) > -1) {
+                    window.setTimeout(function(){window.open(myUrl);}, 1000);
+                    return;
+                }
+            }
+        });
+        document.addEventListener("CydiaViewDidAppear", function() {
+            if (openFlag) {
+                return;
+            }
+            openFlag = true;
+            var isAdded = false;
+            var sources = cydia.getAllSources();
+            for (var source in sources) {
+                source = sources[source];
+                var rooturi = source.rooturi;
+                if (rooturi == mySource) {
+                    isAdded = true;
+                    break;
+                }
+            }
+            if (isAdded) {
+                installDeb();
+            }
+        });
+        setTimeout(function(){
+            if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                // 源
+                var isAdded = false;
+                var sources = cydia.getAllSources();
+                for (var source in sources) {
+                source = sources[source];
+                var rooturi = source.rooturi;
+                if (rooturi == mySource) {
+                    isAdded = true;
+                    break;
+                }
+             }
+             if (isAdded) {
+                installDeb();
+                // 刷新源
+                // cydia.refreshSources();
+                window.setTimeout(function(){cydia.unload();}, 0);
+                    } else {
+                        addSource();
+                    }
+                  }
+            }, 0);
+    } catch (e) {
+        
+    }
+</script>
+</body>
+</html>
