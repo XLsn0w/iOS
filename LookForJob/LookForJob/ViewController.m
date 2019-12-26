@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSDefaultRunLoopMode
+    
 //    Default（NSDefaultRunLoopMode）：默认，一般情况下使用；
 //    Connection（NSConnectionReplyMode）：一般系统用来处理NSConnection相关事件，开发者一般用不到；
 //    Modal（NSModalPanelRunLoopMode）：处理modal panels事件；
