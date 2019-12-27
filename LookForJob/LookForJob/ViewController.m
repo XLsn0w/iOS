@@ -48,5 +48,50 @@
     });
 }
 
+/*
+ 
+ 说一下tableview的执行顺序：
+
+ 1.它会调用代理方法确定有几个分区
+
+ numberOfSectionsInTableView:
+
+ 2.确定每个分区的表头高和表尾高(如果设定了HeardView和FooterView)
+
+ heightForHeaderInSection:
+
+ tableView:heightForFooterInSection:
+
+ 3.确定每个分区有多少的cell
+
+ numberOfRowsInSection:
+
+ 4.然后确定cell的高度
+
+ heightForRowAtIndexPath:
+
+ 如果有多个section和row则循环执行上面的代码
+
+ 5.以上信息确定完毕后及调用代理方法去获取cell
+
+ cellForRowAtIndexPath:
+
+ 6.返回cell的高度
+
+ heightForRowAtIndexPath:
+
+ 7.cell将要显示到屏幕上
+
+ willDisplayCell:forRowAtIndexPath:
+
+ 8.cell超出屏幕进行服用时及会调用两次
+
+ heightForRowAtIndexPath:
+
+ 然后在进行调用 5 . 6. 7 方法
+
+
+ 
+ */
 
 @end
