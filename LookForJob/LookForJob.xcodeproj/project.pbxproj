@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04820D8E23B4B37400516B81 /* ARC_Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 04820D8D23B4B37400516B81 /* ARC_Object.m */; };
 		04BA0C5923B3399700AFDC5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA0C5823B3399700AFDC5B /* AppDelegate.m */; };
 		04BA0C5C23B3399700AFDC5B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA0C5B23B3399700AFDC5B /* SceneDelegate.m */; };
 		04BA0C5F23B3399700AFDC5B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA0C5E23B3399700AFDC5B /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04820D8C23B4B37400516B81 /* ARC_Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARC_Object.h; sourceTree = "<group>"; };
+		04820D8D23B4B37400516B81 /* ARC_Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARC_Object.m; sourceTree = "<group>"; };
 		04BA0C5423B3399700AFDC5B /* LookForJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookForJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA0C5723B3399700AFDC5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04BA0C5823B3399700AFDC5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				04BA0C5B23B3399700AFDC5B /* SceneDelegate.m */,
 				04BA0C5D23B3399700AFDC5B /* ViewController.h */,
 				04BA0C5E23B3399700AFDC5B /* ViewController.m */,
+				04820D8C23B4B37400516B81 /* ARC_Object.h */,
+				04820D8D23B4B37400516B81 /* ARC_Object.m */,
 				04BA0C6023B3399700AFDC5B /* Main.storyboard */,
 				04BA0C6323B3399A00AFDC5B /* Assets.xcassets */,
 				04BA0C6523B3399A00AFDC5B /* LaunchScreen.storyboard */,
@@ -269,6 +274,7 @@
 			files = (
 				04BA0C5F23B3399700AFDC5B /* ViewController.m in Sources */,
 				04BA0C5923B3399700AFDC5B /* AppDelegate.m in Sources */,
+				04820D8E23B4B37400516B81 /* ARC_Object.m in Sources */,
 				04BA0C6A23B3399A00AFDC5B /* main.m in Sources */,
 				04BA0C5C23B3399700AFDC5B /* SceneDelegate.m in Sources */,
 			);
