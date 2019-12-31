@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04C0CFBA23B9D012004BF5CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0CFB923B9D012004BF5CC /* AppDelegate.m */; };
+		04C0CFBD23B9D012004BF5CC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0CFBC23B9D012004BF5CC /* SceneDelegate.m */; };
+		04C0CFC023B9D012004BF5CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0CFBF23B9D012004BF5CC /* ViewController.m */; };
+		04C0CFC323B9D012004BF5CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C0CFC123B9D012004BF5CC /* Main.storyboard */; };
+		04C0CFC523B9D018004BF5CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C0CFC423B9D018004BF5CC /* Assets.xcassets */; };
+		04C0CFC823B9D018004BF5CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C0CFC623B9D018004BF5CC /* LaunchScreen.storyboard */; };
+		04C0CFCB23B9D018004BF5CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0CFCA23B9D018004BF5CC /* main.m */; };
+		04C0CFD523B9D018004BF5CC /* KeyboardDismissTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0CFD423B9D018004BF5CC /* KeyboardDismissTests.m */; };
+		04C0CFE023B9D018004BF5CC /* KeyboardDismissUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0CFDF23B9D018004BF5CC /* KeyboardDismissUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04C0CFD123B9D018004BF5CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04C0CFAD23B9D011004BF5CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04C0CFB423B9D012004BF5CC;
+			remoteInfo = KeyboardDismiss;
+		};
+		04C0CFDC23B9D018004BF5CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04C0CFAD23B9D011004BF5CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04C0CFB423B9D012004BF5CC;
+			remoteInfo = KeyboardDismiss;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04C0CFB523B9D012004BF5CC /* KeyboardDismiss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardDismiss.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C0CFB823B9D012004BF5CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04C0CFB923B9D012004BF5CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04C0CFBB23B9D012004BF5CC /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		04C0CFBC23B9D012004BF5CC /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		04C0CFBE23B9D012004BF5CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04C0CFBF23B9D012004BF5CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04C0CFC223B9D012004BF5CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04C0CFC423B9D018004BF5CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04C0CFC723B9D018004BF5CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04C0CFC923B9D018004BF5CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C0CFCA23B9D018004BF5CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04C0CFD023B9D018004BF5CC /* KeyboardDismissTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardDismissTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C0CFD423B9D018004BF5CC /* KeyboardDismissTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardDismissTests.m; sourceTree = "<group>"; };
+		04C0CFD623B9D018004BF5CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C0CFDB23B9D018004BF5CC /* KeyboardDismissUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardDismissUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C0CFDF23B9D018004BF5CC /* KeyboardDismissUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardDismissUITests.m; sourceTree = "<group>"; };
+		04C0CFE123B9D018004BF5CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04C0CFB223B9D012004BF5CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C0CFCD23B9D018004BF5CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C0CFD823B9D018004BF5CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04C0CFAC23B9D011004BF5CC = {
+			isa = PBXGroup;
+			children = (
+				04C0CFB723B9D012004BF5CC /* KeyboardDismiss */,
+				04C0CFD323B9D018004BF5CC /* KeyboardDismissTests */,
+				04C0CFDE23B9D018004BF5CC /* KeyboardDismissUITests */,
+				04C0CFB623B9D012004BF5CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04C0CFB623B9D012004BF5CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04C0CFB523B9D012004BF5CC /* KeyboardDismiss.app */,
+				04C0CFD023B9D018004BF5CC /* KeyboardDismissTests.xctest */,
+				04C0CFDB23B9D018004BF5CC /* KeyboardDismissUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04C0CFB723B9D012004BF5CC /* KeyboardDismiss */ = {
+			isa = PBXGroup;
+			children = (
+				04C0CFB823B9D012004BF5CC /* AppDelegate.h */,
+				04C0CFB923B9D012004BF5CC /* AppDelegate.m */,
+				04C0CFBB23B9D012004BF5CC /* SceneDelegate.h */,
+				04C0CFBC23B9D012004BF5CC /* SceneDelegate.m */,
+				04C0CFBE23B9D012004BF5CC /* ViewController.h */,
+				04C0CFBF23B9D012004BF5CC /* ViewController.m */,
+				04C0CFC123B9D012004BF5CC /* Main.storyboard */,
+				04C0CFC423B9D018004BF5CC /* Assets.xcassets */,
+				04C0CFC623B9D018004BF5CC /* LaunchScreen.storyboard */,
+				04C0CFC923B9D018004BF5CC /* Info.plist */,
+				04C0CFCA23B9D018004BF5CC /* main.m */,
+			);
+			path = KeyboardDismiss;
+			sourceTree = "<group>";
+		};
+		04C0CFD323B9D018004BF5CC /* KeyboardDismissTests */ = {
+			isa = PBXGroup;
+			children = (
+				04C0CFD423B9D018004BF5CC /* KeyboardDismissTests.m */,
+				04C0CFD623B9D018004BF5CC /* Info.plist */,
+			);
+			path = KeyboardDismissTests;
+			sourceTree = "<group>";
+		};
+		04C0CFDE23B9D018004BF5CC /* KeyboardDismissUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04C0CFDF23B9D018004BF5CC /* KeyboardDismissUITests.m */,
+				04C0CFE123B9D018004BF5CC /* Info.plist */,
+			);
+			path = KeyboardDismissUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04C0CFB423B9D012004BF5CC /* KeyboardDismiss */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C0CFE423B9D018004BF5CC /* Build configuration list for PBXNativeTarget "KeyboardDismiss" */;
+			buildPhases = (
+				04C0CFB123B9D012004BF5CC /* Sources */,
+				04C0CFB223B9D012004BF5CC /* Frameworks */,
+				04C0CFB323B9D012004BF5CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyboardDismiss;
+			productName = KeyboardDismiss;
+			productReference = 04C0CFB523B9D012004BF5CC /* KeyboardDismiss.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04C0CFCF23B9D018004BF5CC /* KeyboardDismissTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C0CFE723B9D018004BF5CC /* Build configuration list for PBXNativeTarget "KeyboardDismissTests" */;
+			buildPhases = (
+				04C0CFCC23B9D018004BF5CC /* Sources */,
+				04C0CFCD23B9D018004BF5CC /* Frameworks */,
+				04C0CFCE23B9D018004BF5CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04C0CFD223B9D018004BF5CC /* PBXTargetDependency */,
+			);
+			name = KeyboardDismissTests;
+			productName = KeyboardDismissTests;
+			productReference = 04C0CFD023B9D018004BF5CC /* KeyboardDismissTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04C0CFDA23B9D018004BF5CC /* KeyboardDismissUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C0CFEA23B9D018004BF5CC /* Build configuration list for PBXNativeTarget "KeyboardDismissUITests" */;
+			buildPhases = (
+				04C0CFD723B9D018004BF5CC /* Sources */,
+				04C0CFD823B9D018004BF5CC /* Frameworks */,
+				04C0CFD923B9D018004BF5CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04C0CFDD23B9D018004BF5CC /* PBXTargetDependency */,
+			);
+			name = KeyboardDismissUITests;
+			productName = KeyboardDismissUITests;
+			productReference = 04C0CFDB23B9D018004BF5CC /* KeyboardDismissUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04C0CFAD23B9D011004BF5CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = XLsn0w;
+				TargetAttributes = {
+					04C0CFB423B9D012004BF5CC = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					04C0CFCF23B9D018004BF5CC = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 04C0CFB423B9D012004BF5CC;
+					};
+					04C0CFDA23B9D018004BF5CC = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 04C0CFB423B9D012004BF5CC;
+					};
+				};
+			};
+			buildConfigurationList = 04C0CFB023B9D011004BF5CC /* Build configuration list for PBXProject "KeyboardDismiss" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04C0CFAC23B9D011004BF5CC;
+			productRefGroup = 04C0CFB623B9D012004BF5CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04C0CFB423B9D012004BF5CC /* KeyboardDismiss */,
+				04C0CFCF23B9D018004BF5CC /* KeyboardDismissTests */,
+				04C0CFDA23B9D018004BF5CC /* KeyboardDismissUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04C0CFB323B9D012004BF5CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C0CFC823B9D018004BF5CC /* LaunchScreen.storyboard in Resources */,
+				04C0CFC523B9D018004BF5CC /* Assets.xcassets in Resources */,
+				04C0CFC323B9D012004BF5CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C0CFCE23B9D018004BF5CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C0CFD923B9D018004BF5CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04C0CFB123B9D012004BF5CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C0CFC023B9D012004BF5CC /* ViewController.m in Sources */,
+				04C0CFBA23B9D012004BF5CC /* AppDelegate.m in Sources */,
+				04C0CFCB23B9D018004BF5CC /* main.m in Sources */,
+				04C0CFBD23B9D012004BF5CC /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C0CFCC23B9D018004BF5CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C0CFD523B9D018004BF5CC /* KeyboardDismissTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C0CFD723B9D018004BF5CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C0CFE023B9D018004BF5CC /* KeyboardDismissUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04C0CFD223B9D018004BF5CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04C0CFB423B9D012004BF5CC /* KeyboardDismiss */;
+			targetProxy = 04C0CFD123B9D018004BF5CC /* PBXContainerItemProxy */;
+		};
+		04C0CFDD23B9D018004BF5CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04C0CFB423B9D012004BF5CC /* KeyboardDismiss */;
+			targetProxy = 04C0CFDC23B9D018004BF5CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04C0CFC123B9D012004BF5CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04C0CFC223B9D012004BF5CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04C0CFC623B9D018004BF5CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04C0CFC723B9D018004BF5CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04C0CFE223B9D018004BF5CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		04C0CFE323B9D018004BF5CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04C0CFE523B9D018004BF5CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JMP4343QW7;
+				INFOPLIST_FILE = KeyboardDismiss/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlsn0w.KeyboardDismiss;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04C0CFE623B9D018004BF5CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JMP4343QW7;
+				INFOPLIST_FILE = KeyboardDismiss/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlsn0w.KeyboardDismiss;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04C0CFE823B9D018004BF5CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JMP4343QW7;
+				INFOPLIST_FILE = KeyboardDismissTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlsn0w.KeyboardDismissTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeyboardDismiss.app/KeyboardDismiss";
+			};
+			name = Debug;
+		};
+		04C0CFE923B9D018004BF5CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JMP4343QW7;
+				INFOPLIST_FILE = KeyboardDismissTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlsn0w.KeyboardDismissTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeyboardDismiss.app/KeyboardDismiss";
+			};
+			name = Release;
+		};
+		04C0CFEB23B9D018004BF5CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JMP4343QW7;
+				INFOPLIST_FILE = KeyboardDismissUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlsn0w.KeyboardDismissUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KeyboardDismiss;
+			};
+			name = Debug;
+		};
+		04C0CFEC23B9D018004BF5CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JMP4343QW7;
+				INFOPLIST_FILE = KeyboardDismissUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlsn0w.KeyboardDismissUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KeyboardDismiss;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04C0CFB023B9D011004BF5CC /* Build configuration list for PBXProject "KeyboardDismiss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C0CFE223B9D018004BF5CC /* Debug */,
+				04C0CFE323B9D018004BF5CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C0CFE423B9D018004BF5CC /* Build configuration list for PBXNativeTarget "KeyboardDismiss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C0CFE523B9D018004BF5CC /* Debug */,
+				04C0CFE623B9D018004BF5CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C0CFE723B9D018004BF5CC /* Build configuration list for PBXNativeTarget "KeyboardDismissTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C0CFE823B9D018004BF5CC /* Debug */,
+				04C0CFE923B9D018004BF5CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C0CFEA23B9D018004BF5CC /* Build configuration list for PBXNativeTarget "KeyboardDismissUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C0CFEB23B9D018004BF5CC /* Debug */,
+				04C0CFEC23B9D018004BF5CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04C0CFAD23B9D011004BF5CC /* Project object */;
+}
