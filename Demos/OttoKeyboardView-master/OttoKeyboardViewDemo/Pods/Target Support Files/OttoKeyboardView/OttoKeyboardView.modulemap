@@ -1,0 +1,6 @@
+framework module OttoKeyboardView {
+  umbrella header "OttoKeyboardView-umbrella.h"
+
+  export *
+  module * { export * }
+}
