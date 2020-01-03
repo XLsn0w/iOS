@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04193F0D23BF3F160075DE3B /* NSDictionary+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04193F0B23BF3F160075DE3B /* NSDictionary+Validation.m */; };
 		043DA9FB23B5E90F0085308A /* ModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA9FA23B5E90F0085308A /* ModelObject.m */; };
 		04820D8E23B4B37400516B81 /* ARC_Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 04820D8D23B4B37400516B81 /* ARC_Object.m */; };
 		04BA0C5923B3399700AFDC5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA0C5823B3399700AFDC5B /* AppDelegate.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04193F0B23BF3F160075DE3B /* NSDictionary+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Validation.m"; sourceTree = "<group>"; };
+		04193F0C23BF3F160075DE3B /* NSDictionary+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Validation.h"; sourceTree = "<group>"; };
 		043DA9F923B5E90F0085308A /* ModelObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelObject.h; sourceTree = "<group>"; };
 		043DA9FA23B5E90F0085308A /* ModelObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelObject.m; sourceTree = "<group>"; };
 		04820D8C23B4B37400516B81 /* ARC_Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARC_Object.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				04820D8C23B4B37400516B81 /* ARC_Object.h */,
 				04820D8D23B4B37400516B81 /* ARC_Object.m */,
 				043DA9F923B5E90F0085308A /* ModelObject.h */,
+				04193F0C23BF3F160075DE3B /* NSDictionary+Validation.h */,
+				04193F0B23BF3F160075DE3B /* NSDictionary+Validation.m */,
 				043DA9FA23B5E90F0085308A /* ModelObject.m */,
 				04F0D56E23BDBEC500B0A484 /* XLsn0wResponder.h */,
 				04F0D56F23BDBEC500B0A484 /* XLsn0wResponder.m */,
@@ -290,6 +295,7 @@
 			files = (
 				04F0D57323BDC58C00B0A484 /* Base.swift in Sources */,
 				043DA9FB23B5E90F0085308A /* ModelObject.m in Sources */,
+				04193F0D23BF3F160075DE3B /* NSDictionary+Validation.m in Sources */,
 				04BA0C5F23B3399700AFDC5B /* ViewController.m in Sources */,
 				04BA0C5923B3399700AFDC5B /* AppDelegate.m in Sources */,
 				04F0D57023BDBEC500B0A484 /* XLsn0wResponder.m in Sources */,
