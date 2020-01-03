@@ -18,6 +18,8 @@
 		04BA0C6A23B3399A00AFDC5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA0C6923B3399A00AFDC5B /* main.m */; };
 		04BA0C7423B3399A00AFDC5B /* LookForJobTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA0C7323B3399A00AFDC5B /* LookForJobTests.m */; };
 		04BA0C7F23B3399A00AFDC5B /* LookForJobUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA0C7E23B3399A00AFDC5B /* LookForJobUITests.m */; };
+		04F0D57023BDBEC500B0A484 /* XLsn0wResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0D56F23BDBEC500B0A484 /* XLsn0wResponder.m */; };
+		04F0D57323BDC58C00B0A484 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0D57223BDC58C00B0A484 /* Base.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		04BA0C7A23B3399A00AFDC5B /* LookForJobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LookForJobUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA0C7E23B3399A00AFDC5B /* LookForJobUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookForJobUITests.m; sourceTree = "<group>"; };
 		04BA0C8023B3399A00AFDC5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F0D56E23BDBEC500B0A484 /* XLsn0wResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLsn0wResponder.h; sourceTree = "<group>"; };
+		04F0D56F23BDBEC500B0A484 /* XLsn0wResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLsn0wResponder.m; sourceTree = "<group>"; };
+		04F0D57123BDC58C00B0A484 /* LookForJob-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LookForJob-Bridging-Header.h"; sourceTree = "<group>"; };
+		04F0D57223BDC58C00B0A484 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,15 +122,19 @@
 				04BA0C5B23B3399700AFDC5B /* SceneDelegate.m */,
 				04BA0C5D23B3399700AFDC5B /* ViewController.h */,
 				04BA0C5E23B3399700AFDC5B /* ViewController.m */,
+				04F0D57223BDC58C00B0A484 /* Base.swift */,
 				04820D8C23B4B37400516B81 /* ARC_Object.h */,
 				04820D8D23B4B37400516B81 /* ARC_Object.m */,
 				043DA9F923B5E90F0085308A /* ModelObject.h */,
 				043DA9FA23B5E90F0085308A /* ModelObject.m */,
+				04F0D56E23BDBEC500B0A484 /* XLsn0wResponder.h */,
+				04F0D56F23BDBEC500B0A484 /* XLsn0wResponder.m */,
 				04BA0C6023B3399700AFDC5B /* Main.storyboard */,
 				04BA0C6323B3399A00AFDC5B /* Assets.xcassets */,
 				04BA0C6523B3399A00AFDC5B /* LaunchScreen.storyboard */,
 				04BA0C6823B3399A00AFDC5B /* Info.plist */,
 				04BA0C6923B3399A00AFDC5B /* main.m */,
+				04F0D57123BDC58C00B0A484 /* LookForJob-Bridging-Header.h */,
 			);
 			path = LookForJob;
 			sourceTree = "<group>";
@@ -214,6 +224,7 @@
 				TargetAttributes = {
 					04BA0C5323B3399700AFDC5B = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					04BA0C6E23B3399A00AFDC5B = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -277,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F0D57323BDC58C00B0A484 /* Base.swift in Sources */,
 				043DA9FB23B5E90F0085308A /* ModelObject.m in Sources */,
 				04BA0C5F23B3399700AFDC5B /* ViewController.m in Sources */,
 				04BA0C5923B3399700AFDC5B /* AppDelegate.m in Sources */,
+				04F0D57023BDBEC500B0A484 /* XLsn0wResponder.m in Sources */,
 				04820D8E23B4B37400516B81 /* ARC_Object.m in Sources */,
 				04BA0C6A23B3399A00AFDC5B /* main.m in Sources */,
 				04BA0C5C23B3399700AFDC5B /* SceneDelegate.m in Sources */,
@@ -451,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JMP4343QW7;
 				INFOPLIST_FILE = LookForJob/Info.plist;
@@ -460,6 +474,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xlsn0w.LookForJob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LookForJob/LookForJob-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -468,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JMP4343QW7;
 				INFOPLIST_FILE = LookForJob/Info.plist;
@@ -477,6 +495,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xlsn0w.LookForJob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LookForJob/LookForJob-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -484,6 +504,7 @@
 		04BA0C8723B3399A00AFDC5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JMP4343QW7;
@@ -504,6 +525,7 @@
 		04BA0C8823B3399A00AFDC5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JMP4343QW7;
@@ -524,6 +546,7 @@
 		04BA0C8A23B3399A00AFDC5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JMP4343QW7;
 				INFOPLIST_FILE = LookForJobUITests/Info.plist;
@@ -542,6 +565,7 @@
 		04BA0C8B23B3399A00AFDC5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JMP4343QW7;
 				INFOPLIST_FILE = LookForJobUITests/Info.plist;
