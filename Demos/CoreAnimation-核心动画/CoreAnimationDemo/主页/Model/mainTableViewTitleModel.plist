@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>headerTitle</key>
+		<string>1.图层树</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>在视图上添加 CALayer 子图层</string>
+				<key>detail</key>
+				<string>CALayer</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>2.寄宿图</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>在 CALayer 图层上显示一张图片</string>
+				<key>detail</key>
+				<string>contents、contentsGravity 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>在 CALayer 图层上显示一张图片</string>
+				<key>detail</key>
+				<string>contentsScale、masksToBounds 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>在图层中显示寄宿图的一个子域</string>
+				<key>detail</key>
+				<string>contentsRect 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>描述图片在各个方向上如何拉伸</string>
+				<key>detail</key>
+				<string>contentsCenter 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>用 Core Graphics 直接绘制寄宿图</string>
+				<key>detail</key>
+				<string>CALayerDelegate</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>3.图层几何学</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>演示一个钟表示例</string>
+				<key>detail</key>
+				<string>anchorPoint 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>给 zPosition 提高一个像素就可以让绿色视图前置</string>
+				<key>detail</key>
+				<string>zPosition、anchorPointZ</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>触摸事件</string>
+				<key>detail</key>
+				<string>使用 containsPoint 判断被点击的图层</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>触摸事件</string>
+				<key>detail</key>
+				<string>使用 hitTest:返回当前被触摸的图层</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>4.视觉效果</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>圆角</string>
+				<key>detail</key>
+				<string>cornerRadius、masksToBounds</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>图层边框</string>
+				<key>detail</key>
+				<string>borderWidth、borderColor</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>阴影裁剪</string>
+				<key>detail</key>
+				<string>shadowOpacity...</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>用 shadowPath 指定任意阴影形状</string>
+				<key>detail</key>
+				<string>shadowPath 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>图层蒙板</string>
+				<key>detail</key>
+				<string>mask 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>拉伸过滤 - 数字时钟 Demo</string>
+				<key>detail</key>
+				<string>magnificationFilter、magnificationFilter</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>使用 shouldRasterize 属性解决组透明问题</string>
+				<key>detail</key>
+				<string>shouldRasterize 属性</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>5.仿射变换</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>使用仿射变换旋转 45°</string>
+				<key>detail</key>
+				<string>CALayer 的 affineTransform 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>混合变换</string>
+				<key>detail</key>
+				<string>先缩小 50%，再旋转 30 度，最后向右移动 200 个像素</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>3D 变换 - 绕 Y 轴做 45 度角的旋转</string>
+				<key>detail</key>
+				<string>CATransform3DMakeRotation()</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>视图透视 - 对上一个 3D变换应用透视效果 </string>
+				<key>detail</key>
+				<string>设置3D变换矩阵的 m34 值</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>在一个视图容器内并排放置两个视图</string>
+				<key>detail</key>
+				<string>sublayerTransform 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>扁平化图层</string>
+				<key>detail</key>
+				<string>内外图层做相反的旋转变换是否会抵消？</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>立方体-固态的3D对象</string>
+				<key>detail</key>
+				<string>用 6 个独立的视图构建立方体的各个面</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>6.专用图层</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>用 CAShapeLayer 绘制火柴人</string>
+				<key>detail</key>
+				<string>CAShapeLayer</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>用 CATextLayer 实现 UILabel 效果</string>
+				<key>detail</key>
+				<string>CATextLayer</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>用 CATransformLayer 装配一个 3D 图层体系</string>
+				<key>detail</key>
+				<string>CATransformLayer</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>渐变效果</string>
+				<key>detail</key>
+				<string>CAGradientLayer</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>高效生成相似图层</string>
+				<key>detail</key>
+				<string>CAReplicatorLayer</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>通过 CAReplicatorLayer 实现反射效果</string>
+				<key>detail</key>
+				<string>CAReplicatorLayer</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>用 CAScrollLayer 实现 UIScrollView 视图</string>
+				<key>detail</key>
+				<string>CAScrollLayer</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>把一张大图分成砖块加载</string>
+				<key>detail</key>
+				<string>CATiledLayer</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>用 CAEmitterLayer 创建火焰爆炸效果</string>
+				<key>detail</key>
+				<string>CAEmitterLayer：高性能的粒子引擎</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>使用 OpenGL ES 2.0 渲染一个有色三角</string>
+				<key>detail</key>
+				<string>CAEAGLLayer：高性能绘图，以显示 OpenGL 图形(deprecated)</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>视频播放器</string>
+				<key>detail</key>
+				<string>AVPlayerLayer</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>7.隐式动画</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>随机改变图层颜色+完成块</string>
+				<key>detail</key>
+				<string>通过 CATransaction 类来管理事务</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>直接对 UIView 关联的图层做动画</string>
+				<key>detail</key>
+				<string>图层行为</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>使用 actions 字典实现颜色过渡</string>
+				<key>detail</key>
+				<string>自定义行为：推进过渡</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>使用呈现图层判断当前图层位置</string>
+				<key>detail</key>
+				<string>presentationLayer 呈现图层</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>8.显式动画</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>属性动画</string>
+				<key>detail</key>
+				<string>CABasicAnimation </string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>关键帧动画</string>
+				<key>detail</key>
+				<string>CAKeyframeAnimation </string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>用 transform 属性对图层做动画</string>
+				<key>detail</key>
+				<string>CAKeyframeAnimation </string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>动画组:组合关键帧路径和基础动画</string>
+				<key>detail</key>
+				<string>CAAnimationGroup</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>使用 CATransition 对图片做过渡动画</string>
+				<key>detail</key>
+				<string>CATransition.type、CATransition.subtype</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>自定义过渡动画</string>
+				<key>detail</key>
+				<string>renderInContext:</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>在动画过程中移除动画</string>
+				<key>detail</key>
+				<string>removeAnimationForKey:、removeAllAnimations</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>9.图层时间</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>测试 duration 和 repeatCount</string>
+				<key>detail</key>
+				<string>CAMediaTiming 的 duration 和 repeatCount 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>使用 autoreverses 属性实现门的摇摆</string>
+				<key>detail</key>
+				<string>repeatDuration、autoreverses 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>测试时间偏移和速度的简单示例</string>
+				<key>detail</key>
+				<string>timeOffset、speed 属性</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>通过触摸手势手动控制动画</string>
+				<key>detail</key>
+				<string>timeOffset、speed=0</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>10.缓冲</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>缓冲函数示例</string>
+				<key>detail</key>
+				<string>[CAMediaTimingFunction functionWithName:]</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>UIKit 的动画缓冲</string>
+				<key>detail</key>
+				<string>[UIView animateWithDuration:delay:options:animations:completion:]</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>缓冲和关键帧动画</string>
+				<key>detail</key>
+				<string>在关键帧动画中添加缓冲函数</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>缓冲函数长啥样？</string>
+				<key>detail</key>
+				<string>使用 UIBezierPath 绘制 CAMediaTimingFunction 缓冲函数</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>自定义缓冲函数</string>
+				<key>detail</key>
+				<string>[CAMediaTimingFunction functionWithControlPoints::::];</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>通过关键帧动画实现反弹球效果</string>
+				<key>detail</key>
+				<string>基于关键帧的缓冲</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>使用插入的值创建关键帧动画</string>
+				<key>detail</key>
+				<string>自定义缓冲函数，使用 bounceEaseOut 函数</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>11.基于定时器的动画</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>使用 NSTimer 实现弹性球动画</string>
+				<key>detail</key>
+				<string>定时帧</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>使用 CADisplayLink 实现弹性球动画</string>
+				<key>detail</key>
+				<string>CADisplayLink、CACurrentMediaTime()</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>-</string>
+				<key>detail</key>
+				<string>开源物理引擎 Chipmunk2D</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>12.性能调优</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>-</string>
+				<key>detail</key>
+				<string>-</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>13.高效绘图</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>用 Core Graphics 实现一个简单的绘图应用</string>
+				<key>detail</key>
+				<string>使用 Core Graphics 绘制矢量图形</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>用 CAShapeLayer 重新实现绘图应用</string>
+				<key>detail</key>
+				<string>使用 Core Animation 的 CAShapeLayer</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>黑板应用</string>
+				<key>detail</key>
+				<string>脏矩形：需要重绘的区域</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>黑板应用</string>
+				<key>detail</key>
+				<string>用 -setNeedsDisplayInRect: 来减少不必要的绘制</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>14.图像IO</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>使用 UICollectionView 实现的图片传送器</string>
+				<key>detail</key>
+				<string>主线程同步加载</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>使用 GCD 加载传送图片</string>
+				<key>detail</key>
+				<string>后台线程加载图片，主线程显示</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>强制图片解压显示</string>
+				<key>detail</key>
+				<string>CGContext</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>通过 CATiledLayer 显示图片</string>
+				<key>detail</key>
+				<string>CATiledLayer</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>添加缓存</string>
+				<key>detail</key>
+				<string>NSCache</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>测试不同类型图片的相对加载性能</string>
+				<key>detail</key>
+				<string>PNG vs JPG</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>PNG 遮罩图片和JPEG 图片</string>
+				<key>detail</key>
+				<string>混合图片</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>加载和显示 PVRTC 图片</string>
+				<key>detail</key>
+				<string>PVRTC 图片加载后无需解压直接绘制</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>15.图层性能</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>离屏渲染</string>
+				<key>detail</key>
+				<string>用 CAShapeLayer 画一个圆角矩形</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>离屏渲染</string>
+				<key>detail</key>
+				<string>用可伸缩图片绘制圆角矩形</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>减少图层数量：裁切</string>
+				<key>detail</key>
+				<string>绘制 3D 图层矩阵</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>排除可视区域之外的图层</string>
+				<key>detail</key>
+				<string>绘制 3D 图层矩阵</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>对象回收：通过回收减少不必要的分配</string>
+				<key>detail</key>
+				<string>绘制 3D 图层矩阵</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>16.折叠动画</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>仿射变换</string>
+				<key>detail</key>
+				<string>-</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>折叠动画列表</string>
+				<key>detail</key>
+				<string>-</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>圆角</string>
+				<key>detail</key>
+				<string>-</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
