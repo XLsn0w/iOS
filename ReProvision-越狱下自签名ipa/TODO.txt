@@ -1,2 +1,0 @@
-- Add checks for network connectivity
-- Provide localisation support
