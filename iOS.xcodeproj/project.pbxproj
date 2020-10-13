@@ -8,16 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		78E2D02725344426002478B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E2D02625344426002478B8 /* AppDelegate.m */; };
-		78E2D03025344426002478B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E2D02E25344426002478B8 /* Main.storyboard */; };
 		78E2D03225344428002478B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E2D03125344428002478B8 /* Assets.xcassets */; };
 		78E2D03525344428002478B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E2D03325344428002478B8 /* LaunchScreen.storyboard */; };
 		78E2D03825344428002478B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E2D03725344428002478B8 /* main.m */; };
 		78E2D04225344428002478B8 /* iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E2D04125344428002478B8 /* iOSTests.m */; };
 		78E2D04D25344428002478B8 /* iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E2D04C25344428002478B8 /* iOSUITests.m */; };
-		78E2D0682534444B002478B8 /* ModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E2D05E2534444A002478B8 /* ModelObject.m */; };
 		78E2D0692534444B002478B8 /* ARC_Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E2D0622534444A002478B8 /* ARC_Object.m */; };
-		78E2D06A2534444B002478B8 /* NSDictionary+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E2D0652534444B002478B8 /* NSDictionary+Validation.m */; };
-		78E2D06B2534444B002478B8 /* XLsn0wResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E2D0662534444B002478B8 /* XLsn0wResponder.m */; };
 		78E2D06C2534444B002478B8 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2D0672534444B002478B8 /* Base.swift */; };
 		78E2D07A25344457002478B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E2D07925344457002478B8 /* ViewController.m */; };
 /* End PBXBuildFile section */
@@ -44,7 +40,6 @@
 		78E2D02525344426002478B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78E2D02625344426002478B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		78E2D02B25344426002478B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		78E2D02F25344426002478B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78E2D03125344428002478B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78E2D03425344428002478B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78E2D03625344428002478B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,14 +51,8 @@
 		78E2D04C25344428002478B8 /* iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSUITests.m; sourceTree = "<group>"; };
 		78E2D04E25344428002478B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78E2D05D25344449002478B8 /* iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		78E2D05E2534444A002478B8 /* ModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelObject.m; sourceTree = "<group>"; };
-		78E2D0602534444A002478B8 /* XLsn0wResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLsn0wResponder.h; sourceTree = "<group>"; };
-		78E2D0612534444A002478B8 /* ModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelObject.h; sourceTree = "<group>"; };
 		78E2D0622534444A002478B8 /* ARC_Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARC_Object.m; sourceTree = "<group>"; };
 		78E2D0632534444A002478B8 /* ARC_Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARC_Object.h; sourceTree = "<group>"; };
-		78E2D0642534444B002478B8 /* NSDictionary+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Validation.h"; sourceTree = "<group>"; };
-		78E2D0652534444B002478B8 /* NSDictionary+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Validation.m"; sourceTree = "<group>"; };
-		78E2D0662534444B002478B8 /* XLsn0wResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLsn0wResponder.m; sourceTree = "<group>"; };
 		78E2D0672534444B002478B8 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		78E2D07925344457002478B8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,16 +109,9 @@
 				78E2D02625344426002478B8 /* AppDelegate.m */,
 				78E2D02B25344426002478B8 /* ViewController.h */,
 				78E2D07925344457002478B8 /* ViewController.m */,
-				78E2D02E25344426002478B8 /* Main.storyboard */,
 				78E2D0632534444A002478B8 /* ARC_Object.h */,
 				78E2D0622534444A002478B8 /* ARC_Object.m */,
 				78E2D0672534444B002478B8 /* Base.swift */,
-				78E2D0612534444A002478B8 /* ModelObject.h */,
-				78E2D05E2534444A002478B8 /* ModelObject.m */,
-				78E2D0642534444B002478B8 /* NSDictionary+Validation.h */,
-				78E2D0652534444B002478B8 /* NSDictionary+Validation.m */,
-				78E2D0602534444A002478B8 /* XLsn0wResponder.h */,
-				78E2D0662534444B002478B8 /* XLsn0wResponder.m */,
 				78E2D03125344428002478B8 /* Assets.xcassets */,
 				78E2D03325344428002478B8 /* LaunchScreen.storyboard */,
 				78E2D03625344428002478B8 /* Info.plist */,
@@ -262,7 +244,6 @@
 			files = (
 				78E2D03525344428002478B8 /* LaunchScreen.storyboard in Resources */,
 				78E2D03225344428002478B8 /* Assets.xcassets in Resources */,
-				78E2D03025344426002478B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,10 +270,7 @@
 			files = (
 				78E2D07A25344457002478B8 /* ViewController.m in Sources */,
 				78E2D0692534444B002478B8 /* ARC_Object.m in Sources */,
-				78E2D06B2534444B002478B8 /* XLsn0wResponder.m in Sources */,
 				78E2D02725344426002478B8 /* AppDelegate.m in Sources */,
-				78E2D0682534444B002478B8 /* ModelObject.m in Sources */,
-				78E2D06A2534444B002478B8 /* NSDictionary+Validation.m in Sources */,
 				78E2D06C2534444B002478B8 /* Base.swift in Sources */,
 				78E2D03825344428002478B8 /* main.m in Sources */,
 			);
@@ -330,14 +308,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		78E2D02E25344426002478B8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				78E2D02F25344426002478B8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		78E2D03325344428002478B8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
