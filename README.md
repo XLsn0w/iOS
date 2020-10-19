@@ -1,5 +1,10 @@
 # XLsn0w iOS Developer
 
+## 降级cocoapods老版本 安装pod
+0. sudo gem install -n /usr/local/bin cocoapods -v 1.6.1
+1. git clone https://gitee.com/mirrors/CocoaPods-Specs.git ~/.cocoapods/repos/master
+2. pod _1.6.1_ install
+
 # WebView
 ## 1.说一下 JS 和 OC 互相调用的几种方式？ 
 - js调用oc的三种方式:
