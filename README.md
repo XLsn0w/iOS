@@ -1,7 +1,395 @@
 # XLsn0w iOS Developer
 
-## WebRTC 入门教程
-### https://webrtc.org.cn/20190517_tutorial4_webrtc_ios/
+### WebRTC 入门教程
+#### iOS 端1对1音视频实时通话的具体实现
+
+iOS 端的实现。具体步骤如下：
+
+权限申请
+引入 WebRTC 库
+采集并显示本地视频
+信令驱动
+创建音视频数据通道
+媒体协商
+渲染远端视频
+
+通过上面几个小节，全面介绍如何在iOS端如何使用 WebRTC。
+
+申请权限
+首先，我们来看一下 iOS 端是如何获取访问音视频设备权限的。相比 Android 端而言，iOS端获取相关权限要容易很多。其步骤如下：
+
+打开项目，点击左侧目录中的项目。
+在左侧目录找到 info.plist，并将其打开。
+点击 右侧 看到 “+” 号的地方。
+添加 Camera 和 Microphone 访问权限。
+下面这张图更清晰的展现了申请权限的步骤：
+
+
+
+通过以上步骤，我们就将访问音视频设备的权限申请好了。申请完权限后，下面我们来看一下iOS端如何引入 WebRTC 库。
+
+引入WebRTC库
+在iOS端引入 WebRTC 库有两种方式：
+
+第一种，是通过 WebRTC 源码编译出 WebRTC 库，然后在项目中手动引入它；
+第二种方式，是 WebRTC 官方会定期发布编译好的 WebRTC 库，我们可以使用 Pod 方式进行安装。
+在本项目中，我们使用第二种方式。
+
+使用第二种方式引入 WebRTC 库非常简单，我们只需要写个 Podfile 文件就可以了。在 Podfile 中可以指定下载 WebRTC 库的地址，以及我们要安装的库的名子。
+
+Podfile 文件的具体格式如下:
+
+source 'https://github.com/CocoaPods/Specs.git'
+  
+platform :ios,'11.0'
+
+target 'WebRTC4iOS2' do
+
+pod 'GoogleWebRTC'
+
+end
+
+source，指定了库文件从哪里下载
+platform，指定了使用的平台及平台版本
+target，指定项目的名子
+pod，指定要安装的库
+有了 Podfile 之后，在当前目录下执行 pod install 命令，这样 Pod 工具就可以将 WebRTC 库从源上来载下来。
+
+在执行 pod install 之后，它除了下载库文件之外，会为我们产生一个新的工作空间文件，即**{project}.xcworkspace**。在该文件里，会同时加载项目文件及刚才安装好的 Pod 依赖库，并使两者建立好关联。
+
+这样，WebRTC库就算引入成功了。下面就可以开始写我们自己的代码了。
+
+获取本地视频
+WebRTC 库引入成功之后，我们就可以开始真正的 WebRTC 之旅了。下面，我们来看一下如何获取本地视频并将其展示出来。
+
+在获取视频之前，我们首先要选择使用哪个视频设备采集数据。在WebRTC中，我们可以通过RTCCameraVideoCapture 类获取所有的视频设备。如下所示：
+
+NSArray<AVCaptureDevice*>* devices = [RTCCameraVideoCapture captureDevices];
+AVCaptureDevice* device = devices[0];
+通过上面两行代码，我们就拿到了视频设备中的第一个设备。简单吧！
+
+当然，光有设备还不行。我们还要清楚从设备中采集的数据放到哪里了，这样我们才能将其展示出来。
+
+WebRTC 为我们提供了一个专门的类，即 RTCVideoSource。它有两层含义：
+
+一是表明它是一个视频源。当我们要展示视频的时候，就从这里获取数据；
+另一方面，它也是一个终点。即，当我们从视频设备采集到视频数据时，要交给它暂存起来。
+除此之外，为了能更方便的控制视频设备，WebRTC 提供了一个专门用于操作设备的类，即 RTCCameraVideoCapture。通过它，我们就可以自如的控制视频设备了。
+
+通过上面介绍的两个类，以及前面介绍的 AVCaptureDevice，我们就可以轻松的将视频数据采集出来了。下面我们就来具体看一下代码吧！
+
+在该代码中，首先将 RTCVideoSource 与 RTCCameraVideoCapture 进行绑定，然后再开启设备，这样视频数据就源源不断的被采集到 RTCVideoSource 中了。
+
+...
+
+RTCVideoSource* videoSource = [factory videoSource];
+capture = [[RTCCameraVideoCapturer alloc] initWithDelegate:videoSource];
+
+...
+
+[capture startCaptureWithDevice:device
+                             format:format
+                                fps:fps];
+...
+通过上面的几行代码就可以从摄像头捕获视频数据了。
+
+这里有一点需要特别强调一下，就是 factory 对象。在 WebRTC Native 层，factory 可以说是 “万物的根源”，像 RTCVideoSource、RTCVideoTrack、RTCPeerConnection 这些类型的对象，都需要通过 factory 来创建。 那么，factory 对象又是如何创建出来的呢？
+
+通过下面的代码你就可以一知究竟了：
+
+...
+
+[RTCPeerConnectionFactory initialize];
+    
+//如果点对点工厂为空
+if (!factory)
+{
+    RTCDefaultVideoDecoderFactory* decoderFactory = [[RTCDefaultVideoDecoderFactory alloc] init];
+    RTCDefaultVideoEncoderFactory* encoderFactory = [[RTCDefaultVideoEncoderFactory alloc] init];
+    NSArray* codecs = [encoderFactory supportedCodecs];
+    [encoderFactory setPreferredCodec:codecs[2]];
+    
+    factory = [[RTCPeerConnectionFactory alloc] initWithEncoderFactory: encoderFactory
+                                                        decoderFactory: decoderFactory];
+
+}
+...
+
+在上面代码中，
+
+首先要调用 RTCPeerConnectionFactory 类的 initialize 方法进行初始化；
+然后创建 factory 对象。需要注意的是，在创建 factory 对象时，传入了两个参数：一个是默认的编码器；一个是默认的解码器。我们可以通过修改这两个参数来达到使用不同编解码器的目的。
+有了 factory 对象后，我们就可以开始创建其它对象了。那么，紧接下来的问题就是如何将采集到的视频展示出来了。
+
+在iOS端展示本地视频与Android端还是有很大区别的，这主要是由于不同系统底层实现方式不一样。为了更高效的展示本地视频，它们采用了不同的方式。
+
+在iOS端展示本地视频其实非常的简单，只需要在调用 capture 的 startCaptureWithDevice 方法之前执行下面的语句就好了：
+
+self.localVideoView.captureSession = capture.captureSession;
+当然，在iOS页面初始化的时候，一定要记得定义 localVideoView 哟，其类型为 RTCCameraPreviewView！
+
+通过上面的步骤，我们就可以看到视频设备采集到的视频图像了。
+
+信令驱动
+上面我们介绍了iOS端权限的申请，WebRTC库的引入，以及本地视频的采集与展示，这些功能实现起来都很简单。但接下来我们要介绍的信令就要复杂一些了。
+
+在任何系统中，都可以说信令是系统的灵魂。例如，由谁来发起呼叫；媒体协商时，什么时间发哪种 SDP 都是由信令控制的。
+
+对于本项目来说，它的信令相对还是比较简单，它包括下面几种信令：
+
+客户端命令
+
+join，用户加入房间
+leave，用户离开房间
+message，端到端命令（offer、answer、candidate）
+服务端命令
+
+joined，用户已加入
+leaved，用户已离开
+other_joined，其它用户已加入
+bye，其它用户已离开
+full，房间已满
+这些信令之间是怎样一种关系？在什么情况下该发送怎样的信令呢？要回答这个问题我们就要看一下信令状态机了。
+
+信令状态机
+在 iOS 端的信令与我们之前介绍的 js端 和 Android 端一样，会通过一个信令状态机来管理。在不同的状态下，需要发不同的信令。同样的，当收到服务端，或对端的信令后，状态会随之发生改变。下面我们来看一下这个状态的变化图吧：
+
+
+
+在初始时，客户端处于 init/leaved 状态。
+
+在 init/leaved 状态下，用户只能发送 join 消息。服务端收到 join 消息后，会返回 joined 消息。此时，客户端会更新为 joined 状态。
+在 joined 状态下，客户端有多种选择，收到不同的消息会切到不同的状态:
+如果用户离开房间，那客户端又回到了初始状态，即 init/leaved 状态。
+如果客户端收到 second user join 消息，则切换到 join_conn 状态。在这种状态下，两个用户就可以进行通话了。
+如果客户端收到 second user leave 消息，则切换到 join_unbind 状态。其实 join_unbind状态与 joined 状态基本是一致的。
+如果客户端处于 join_conn 状态，当它收到 second user leave 消息时，也会转成 joined_unbind 状态。
+如果客户端是 joined_unbind 状态，当它收到 second user join 消息时，会切到 join_conn 状态。
+通过上面的状态图，我们就非常清楚的知道了在什么状态下应该发什么信令；或者说，发什么样的信令，状态会发生怎样的变化了。
+
+引入 socket.io 库
+看过我之前文章的同学应该都清楚，无论是在 js端，还是在 Android 端的实时通话中，我一直使用 socket.io库作为信令的基础库。之所以选择 socket.io，
+
+一方面是由于它支持跨平台，这样在各个平台上我们都可以保持相同的逻辑；
+另一方面，socket.io 使用简单，功能又非常强大；
+不过，在 iOS 端的 socket.io 是用 swift 语言实现的，而我们的1对1系统则是用 Object-C 实现的。那么，就带来一个问题，在 OC (Object-C) 里是否可以直接使用 swift 编写的库呢？
+
+答案是肯定的。我们只需要在 Podfile 中 增加 use_frameworks! 指令即可。 所以，我们的 Podfile 现在应该变成这个样子：
+
+source 'https://github.com/CocoaPods/Specs.git'
+  
+platform :ios,'11.0'
+
+use_frameworks!
+
+target 'WebRTC4iOS2' do
+
+pod 'Socket.IO-Client-Swift', '~> 13.3.0'
+pod 'GoogleWebRTC'
+
+end
+上面 Podfile 中，每行的含义大家应该都很清楚了，我这里就不做过多讲解了。
+
+信令的使用
+socket.io 库引入成功后，下面我们来看一下何使用 socket.io。在 iOS 下，使用 socket.io 分为三步：
+
+通过 url 获取 socket。有了 socket 之后我们就可建立与服务器的连接了。
+注册侦听的消息，并为每个侦听的消息绑定一个处理函数。当收到服务器的消息后，随之会触发绑定的函数。
+通过 socket 建立连接。
+发送消息。
+下我们我们就逐一的看它们是如何实现的吧！
+
+获取 socket
+
+在 iOS 中获取 socket 其实很简单，我们来看一下代码：
+
+NSURL* url = [[NSURL alloc] initWithString:addr];
+manager = [[SocketManager alloc] initWithSocketURL:url
+                                            config:@{
+                                            	@"log": @YES,
+    											@"forcePolling":@YES,
+                                                @"forceWebsockets":@YES
+                                                }];
+socket = manager.defaultSocket;
+没错，通过这三行代码就可以了。至于为什么这么写我就不解释了，大家记下来就好了。这是 socket.io的固定格式。
+
+注册侦听消息
+
+使用 socket.io 注册一个侦听消息也非常容易，如下所示：
+
+[socket on:@"joined" callback:^(NSArray * data, SocketAckEmitter * ack) {
+    NSString* room = [data objectAtIndex:0];
+    
+    NSLog(@"joined room(%@)", room);
+    
+    [self.delegate joined:room];
+    
+}];
+上面就是注册一个 joined 消息，并给它绑定一个匿名的处理函数。如果带来的消息还有参数的话，我们可以从 data 这个数组中获取到。
+
+同样的道理，如果我们想注册一个新的侦听消息，可以按着上面的格式，只需将 joined 替换一下就可以了。
+
+建立连接
+这个就更简单了，下接上代码了：
+
+[socket connect];
+没错，只这一句连接就建好了哈！
+
+发送消息
+接下来，让我们看一下如何使用 socket.io 发送消息。
+
+...
+if(socket.status == SocketIOStatusConnected){
+    [socket emit:@"join" with:@[room]];
+}
+...
+socket.io 使用 emit 方法发送消息。它可以带一些参数，这些参数都被放在一个数据里。在上面的代码中，首先要判断socket是否已经处理连接状态，只有处于连接状态时，消息才能被真正发送出去。
+
+以上就是 socket.io 的使用，是不是非常的简单？
+
+创建 RTCPeerConnection
+信令系统建立好后，后面的逻辑都是围绕着信令系统建立起来的。RTCPeerConnection 对象的建立也不例外。
+
+在客户端，用户要想与远端通话，首先要发送 join 消息，也就是要先进入房间。此时，如果服务器判定用户是合法的，则会给客户端回 joined 消息。
+
+客户端收到 joined 消息后，就要创建 RTCPeerConnection 了，也就是要建立一条与远端通话的音视频数据传输通道。
+
+下面，我们就来看一下 RTCPeerConnection 是如何建立的：
+
+...
+
+if (!ICEServers) {
+    ICEServers = [NSMutableArray array];
+    [ICEServers addObject:[self defaultSTUNServer]];
+}
+
+RTCConfiguration* configuration = [[RTCConfiguration alloc] init];
+[configuration setIceServers:ICEServers];
+RTCPeerConnection* conn = [factory
+                                 peerConnectionWithConfiguration:configuration
+                                                     constraints:[self defaultPeerConnContraints]
+                                                        delegate:self];
+
+...
+
+对于 iOS 的 RTCPeerConnection 对象有三个参数：
+
+第一个，是 RTCConfiguration 类型的对象，该对象中最重要的一个字段是 iceservers。它里边存放了 stun/turn 服务器地址。其主要作用是用于NAT穿越。对于 NAT 穿越的知识大家可以自行学习。
+第二个参数，是 RTCMediaConstraints 类型对象，也就是对 RTCPeerConnection 的限制。如，是否接收视频数据？是否接收音频数据？如果要与浏览器互通还要开启 DtlsSrtpKeyAgreement 选项。
+第三个参数，是委拖类型。相当于给 RTCPeerConnection 设置一个观察者。这样RTCPeerConnection 可以将一个状态/信息通过它通知给观察者。但它并不属于观察者模式，这一点大家一定要清楚。
+RTCPeerConnection 对象创建好后，接下来我们介绍的是整个实时通话过程中，最重要的一部分知识，那就是 媒体协商。
+
+媒体协商
+首先，我们要知道媒体协商内容使用是 SDP 协议，不了解这部分知识的同学可以自行学习。其次，我们要清楚整体媒体协商的过程。
+
+iOS 端的媒体协商过程与 Android/JS 端是一模一样的。还是下面这个经典的图:
+
+
+
+A 与 B 进行通话，通话的发起方，首先要创建 Offer 类型的 SDP 内容。之后调用 RTCPeerConnection 对象的 setLocalDescription 方法，将 Offer 保存到本地。
+
+紧接着，将 Offer 发送给服务器。然后，通过信令服务器中转到被呼叫方。被呼叫方收到 Offer 后，调用它的 RTCPeerConnection 对象的 setRemoteDescription 方法，将远端的 Offer 保存起来。
+
+之后，被呼到方创建 Answer 类型的 SDP 内容，并调用 RTCPeerConnection 对象的 setLocalDescription 方法将它存储到本地。
+
+同样的，它也要将 Answer 发送给服务器。服务器收到该消息后，不做任何处理，直接中转给呼叫方。呼叫方收到 Answer 后，调用 setRemoteDescription 将其保存起来。
+
+通过上面的步骤，整个媒体协商部分就完成了。
+
+下面我们就具体看看，在 iOS 端是如何实现这个逻辑的：
+
+...
+
+[peerConnection offerForConstraints:[self defaultPeerConnContraints]
+                  completionHandler:^(RTCSessionDescription * _Nullable sdp, NSError * _Nullable error) {
+                      if(error){
+                          NSLog(@"Failed to create offer SDP, err=%@", error);
+                      } else {
+                          __weak RTCPeerConnection* weakPeerConnction = self->peerConnection;
+                          [self setLocalOffer: weakPeerConnction withSdp: sdp];
+                      }
+                  }];
+...
+在iOS端使用 RTCPeerConnection 对象的 offerForConstraints 方法创建 Offer SDP。它有两个参数：
+
+一个是 RTCMediaConstraints 类型的参数，该参数我们在前面创建 RTCPeerConnection 对象时介绍过，这里不在赘述。
+另一个参数是一个匿名回调函数。可以通过对 error 是否为空来判定 offerForConstraints 方法有没有执行成功。如果执行成功了，参数 sdp 就是创建好的 SDP 内容。
+如果成功获得了 sdp，按照之前的处理流程描述，我们首先要将它只存到本地；然后再将它发送给他务器，服务器中转给另一端。
+
+我们的代码也是严格按照这个过程来的。在上面代码中 setLocalOffer 方法就是做这件事儿。具体代码如下：
+
+...
+[pc setLocalDescription:sdp completionHandler:^(NSError * _Nullable error) {
+        if (!error) {
+            NSLog(@"Successed to set local offer sdp!");
+        }else{
+            NSLog(@"Failed to set local offer sdp, err=%@", error);
+        }
+    }];
+    
+__weak NSString* weakMyRoom = myRoom;
+dispatch_async(dispatch_get_main_queue(), ^{
+    
+    NSDictionary* dict = [[NSDictionary alloc] initWithObjects:@[@"offer", sdp.sdp]
+                                                       forKeys: @[@"type", @"sdp"]];
+    
+    [[SignalClient getInstance] sendMessage: weakMyRoom
+                                    withMsg: dict];
+});
+...
+从上面的代码可以清楚的看出，它做了两件事儿。一是调用 setLocalDescription 方法将 sdp 保存到本地；另一件事儿就是发送消息；
+
+所以，通过上面的描述大家也就知道后面的所有逻辑了。这里我们就不一一展开来讲了。
+
+当整个协商完成之后，紧接着，在WebRTC底层就会进行音视频数据的传输。如果远端的视频数据到达本地后，我们就需要将它展示到界面上。这又是如何做到的呢？
+
+渲染远端视频
+大家是否还记得，在我们创建 RTCPeerConnection 对象时，同时给RTCPeerConnection设置了一个委拖，在我们的项目中就是 CallViewController 对象。在该对象中我们实现了所有 RTCPeerConnection对象的代理方法。其中比较关键的有下面几个：
+
+(void)peerConnection:(RTCPeerConnection *)peerConnection
+didGenerateIceCandidate:(RTCIceCandidate *)candidate；该方法用于收集可用的 Candidate。
+(void)peerConnection:(RTCPeerConnection *)peerConnection
+didChangeIceConnectionState:(RTCIceConnectionState)newState；当 ICE 连接状态发生变化时会触发该方法
+(void)peerConnection:(RTCPeerConnection *)peerConnection
+didAddReceiver:(RTCRtpReceiver *)rtpReceiver
+streams:(NSArray<RTCMediaStream *> *)mediaStreams；该方法在侦听到远端 track 时会触发。
+那么，什么时候开始渲染远端视频呢？当有远端视频流过来的时候，就会触发 (void)peerConnection:(RTCPeerConnection *)peerConnection
+didAddReceiver:(RTCRtpReceiver *)rtpReceiver
+streams:(NSArray<RTCMediaStream *> *)mediaStreams 方法。所以我们只需要在该方法中写一些逻辑即可。
+
+当上面的函数被调用后，我们可以通过 rtpReceiver 参数获取到 track。这个track有可能是音频trak，也有可能是视频trak。所以，我们首先要对 track 做个判断，看其是视频还是音频。
+
+如果是视频的话，就将remoteVideoView加入到trak中，相当于给track添加了一个观察者，这样remoteVideoView就可以从track获取到视频数据了。在 remoteVideoView 实现了渲染方法，一量收到数据就会直接进行渲染。最终，我们就可以看到远端的视频了。
+
+具体代码如下：
+
+...
+RTCMediaStreamTrack* track = rtpReceiver.track;
+if([track.kind isEqualToString:kRTCMediaStreamTrackKindVideo]){
+   
+    if(!self.remoteVideoView){
+        NSLog(@"error:remoteVideoView have not been created!");
+        return;
+    }
+    
+    remoteVideoTrack = (RTCVideoTrack*)track;
+  	
+  	 [remoteVideoTrack addRenderer: self.remoteVideoView];
+}
+   
+...
+```
+通过上面的代码，我们就可以将远端传来的视频展示出来了。
+iOS 端该如何实现一个实时音视频通话程序：
+权限申请
+引入 WebRTC 库
+采集并显示本地视频
+信令驱动
+创建音视频数据通道
+媒体协商
+渲染远端视频
+```
+#### https://webrtc.org.cn/20190517_tutorial4_webrtc_ios/
 
 ## 降级cocoapods老版本 安装pod
 0. sudo gem install -n /usr/local/bin cocoapods -v 1.6.1
