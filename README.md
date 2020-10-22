@@ -3,6 +3,15 @@
 ### WebRTC 入门教程
 #### iOS 端1对1音视频实时通话的具体实现
 
+## 安装homebrew，国内镜像库
+```
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+```
+## 降级cocoapods老版本 安装pod
+0. sudo gem install -n /usr/local/bin cocoapods -v 1.6.1
+1. git clone https://gitee.com/mirrors/CocoaPods-Specs.git ~/.cocoapods/repos/master
+2. pod _1.6.1_ install
+
 iOS 端的实现。具体步骤如下：
 
 权限申请
@@ -390,11 +399,6 @@ iOS 端该如何实现一个实时音视频通话程序：
 渲染远端视频
 ```
 #### https://webrtc.org.cn/20190517_tutorial4_webrtc_ios/
-
-## 降级cocoapods老版本 安装pod
-0. sudo gem install -n /usr/local/bin cocoapods -v 1.6.1
-1. git clone https://gitee.com/mirrors/CocoaPods-Specs.git ~/.cocoapods/repos/master
-2. pod _1.6.1_ install
 
 # WebView
 ## 1.说一下 JS 和 OC 互相调用的几种方式？ 
