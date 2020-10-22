@@ -1,8 +1,5 @@
 # XLsn0w iOS Developer
 
-### WebRTC 入门教程
-#### iOS 端1对1音视频实时通话的具体实现
-
 ## 安装homebrew，国内镜像库
 ```
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
@@ -12,8 +9,10 @@
 1. git clone https://gitee.com/mirrors/CocoaPods-Specs.git ~/.cocoapods/repos/master
 2. pod _1.6.1_ install
 
-iOS 端的实现。具体步骤如下：
 
+### WebRTC 入门教程
+#### iOS 端1对1音视频实时通话的具体实现
+iOS 端的实现。具体步骤如下：
 权限申请
 引入 WebRTC 库
 采集并显示本地视频
