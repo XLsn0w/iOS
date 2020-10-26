@@ -5,10 +5,13 @@
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 ```
 ## 降级cocoapods老版本 安装pod
+```
 0. sudo gem install -n /usr/local/bin cocoapods -v 1.6.1
-1. git clone https://gitee.com/mirrors/CocoaPods-Specs.git ~/.cocoapods/repos/master
-2. pod _1.6.1_ install
 
+1. git clone https://gitee.com/mirrors/CocoaPods-Specs.git ~/.cocoapods/repos/master
+
+2. pod _1.6.1_ install
+```
 
 ### WebRTC 入门教程
 #### iOS 端1对1音视频实时通话的具体实现
